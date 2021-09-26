@@ -153,7 +153,7 @@ const roverPhotos = (name) => {
     }
 
     if (photos[name]) {
-        const renderCollection = renderArray(photos[name]);
+        const renderCollection = renderArray(photos[name], appendImage);
         return `
             <div class="imgCollection">
                 ${renderCollection()}
@@ -167,12 +167,16 @@ const roverPhotos = (name) => {
 }
 
 // hof: renders the photoarray
-const renderArray = (array) => {
+const appendImage = (imageSrc) =>{
+    return `
+        <div class="roverImg"><img width="300" src="${imageSrc}"></div>
+    `
+}
+
+const renderArray = (array, appendCallback) => {
     let out = "";
     array.forEach(element => {
-        out += `
-            <div class="roverImg"><img width="300" src="${element}"></div>
-        `
+        out += appendCallback(element);
     });
 
     return () => {
