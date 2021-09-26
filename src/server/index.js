@@ -33,7 +33,6 @@ app.get('/photos/:name', async (req, res) => {
                 return result.json();
             })
             .then(result => {
-                console.log(result.photo_manifest.max_date);
                 return result.photo_manifest.max_date;
             })
             .then(date => fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${req.params.name}/photos?earth_date=${date}&api_key=${process.env.API_KEY}`))
