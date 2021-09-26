@@ -1,0 +1,133 @@
+/* -------------------  MOBILE  --------------------- */
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial;
+  min-height: 100vh;
+}
+
+#collectionHeader {
+  font-weight: bold;
+  font-size: 2em;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+.quotation {
+  font-style:italic;
+  font-size: 0.7em;
+}
+
+.header {
+  position: relative;
+}
+
+.header > img {
+  max-height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.header > h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navContainer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: grey;
+}
+
+.navItem {
+  display: flex;
+  font-weight: bold;
+  color: white;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navItem:hover {
+  background-color: lightgrey;
+  color: black;
+  border: 1px dashed white;
+  cursor: pointer;
+}
+
+.active {
+  background-color: lightgrey;
+  color: black;
+  border: 1px dashed white;
+}
+
+.imgCollection {
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.roverImg {
+  margin: 3px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border-top: 1px dashed blueviolet;
+  font-size: 0.8em;
+}
+
+/* -------------------  TABLET  --------------------- */
+@media (min-width: 768px) {
+  /* use mobile */
+  .navContainer {
+    flex-direction: row;
+  }
+
+  .navItem {
+    width: 33.33333334%;
+  }
+
+  .active {
+    width: 33.33333334%;
+  }
+}
+
+/* -------------------  DESKTOP  -------------------- */
+
+@media (min-width: 1224px) {
+  /* use mobile */
+  .navItem {
+    width: 20%;
+  }
+
+  .active {
+    width: 20%;
+  }
+}
+
+/* -------------------  LARGE SCREENS  -------------- */
+
+@media (min-width: 1824px) {
+  /* use mobile */
+}
