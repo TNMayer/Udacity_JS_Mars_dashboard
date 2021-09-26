@@ -1,4 +1,3 @@
-
 let store = {
     apod: '',
     rovers: Immutable.List(['Curiosity', 'Opportunity', 'Spirit']),
